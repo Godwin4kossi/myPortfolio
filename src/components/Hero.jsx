@@ -6,7 +6,7 @@ import profile from "../assets/profile-bg.png"
 const Hero = () => {
   return (
     <div className="w-4/5 flex md:flex-row flex-col-reverse justify-between items-center  mx-auto text-black">
-      <div className="hero-left text-left w-1/2">
+      <div className="hero-left text-left md:w-1/2 w-full py-10 md:py-0">
         <span className="text-xl font-semibold">Hi, I am</span>
 
         <div className="">

@@ -6,7 +6,7 @@ import top from '../assets/top.png';
 
 const Footer = () => {
   return (
-    <div className="w-full mt-5 py-50 bg-black h-50 flex flex-col  justify-center">
+    <div className="w-full mt-5 md:py-50 pt-30 pb-30 bg-black h-50 flex flex-col  justify-center">
       <a href="#" className="mx-auto mb-2 animate-ping hover:animate-bounce transition duration-700 ease-in-out">
         <img src={top} alt="scroll to top" />
       </a>

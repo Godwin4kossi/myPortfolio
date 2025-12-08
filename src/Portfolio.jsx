@@ -112,7 +112,7 @@ const Portfolio = () => {
       <div className="bg-[#1A1A1A] text-center">
         <div className="w-full mx-auto">
           <Tabs defaultValue="all">
-            <TabsList className="bg-[#1A1A1A]  flex justify-center gap-4 mx-auto pt-15 pb-5 mb-10 text-center border-b-1 border-gray-500">
+            <TabsList className="bg-[#1A1A1A]  md:h-10 h-50 flex md:flex-row flex-col justify-center gap-4 mx-auto pt-15 pb-5 mb-10 text-center md:border-b-1 border-b-0 border-gray-500">
               <TabsTrigger value="all" className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5">
                 ALL
               </TabsTrigger>

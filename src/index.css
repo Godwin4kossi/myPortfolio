@@ -58,3 +58,16 @@
         transform: translateX(0);
     }
 }
+
+
+@media (min-width: 768px) and (max-width: 769px) {
+  .specialWidth {
+    width: 600px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .form {
+    width: 600px !important;
+  }
+}

@@ -13,14 +13,14 @@ import next from "../assets/next.png";
 const Skills = () => {
   return (
     <div className="w-3/5 skills text-black  mx-auto">
-      <h2 className="text-[1.5rem] py-3 px-5 border-3 border-black mb-5 w-60 mx-auto mt-25 uppercase font-bold">
+      <h2 className="md:text-[1.5rem] py-3 px-5 border-3 border-black mb-5 w-60 mx-auto mt-25 uppercase font-bold">
         Skills
       </h2>
-      <h2 className="text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-left">
+      <h2 className="md:text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-left">
         Using Now :
       </h2>
 
-      <div className="flex flex-wrap justify-start gap-40">
+      <div className="flex flex-wrap justify-start md:gap-40 gap-10">
         <div className="skill-box">
           <img src={html} alt="" />
           <p className="mt-4">HTML5</p>
@@ -42,7 +42,7 @@ const Skills = () => {
           <p className="mt-4 uppercase">bootstrap</p>
         </div>
       </div>
-      <div className="flex flex-start items-end flex-wrap justify-start gap-40 mt-20">
+      <div className="flex flex-start items-end flex-wrap justify-start md:gap-40 gap-10 mt-20">
         <div className="skill-box">
           <img src={wordpress} className="mx-auto" alt="" />
           <p className="mt-4 uppercase">wordpress</p>
@@ -51,16 +51,16 @@ const Skills = () => {
           <img src={tailwind} className="w-[90px] h-[100px]" alt="" />
           <p className="mt-4 uppercase">tailwind</p>
         </div>
-        <div className="skill-box h">
-          <img src={typescript} alt="" className="hidden" />
-          <p className="mt-4 uppercase hidden">typescript</p>
+        <div className="skill-box">
+          <img src={typescript} alt="" className="w-[90px] h-[100px]" />
+          <p className="mt-4 uppercase">typescript</p>
         </div>
       </div>
 
-      <h2 className="text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-left">
+      <h2 className="md:text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-left">
         Learning :
       </h2>
-      <div className="flex flex-start flex-wrap justify-start gap-40 mt-20">
+      <div className="flex flex-start flex-wrap justify-start md:gap-40 gap-10 mt-20">
         <div className="skill-box">
           <img src={git} className="mx-auto" alt="" />
           <p className="mt-4 uppercase">git</p>
@@ -73,10 +73,10 @@ const Skills = () => {
           <img src={typescript} alt="" />
           <p className="mt-4 uppercase">typescript</p>
         </div>
-        {/* <div className="skill-box">
-          <img src={bootstrap} alt="" />
-          <p className="mt-4 uppercase">bootstrap</p>
-        </div> */}
+        <div className="skill-box">
+          <img src={next} alt="" className="w-[100px] h-[100px]" />
+          <p className="mt-4 uppercase">Next jS</p>
+        </div>
       </div>
     </div>
   );

@@ -9,13 +9,12 @@ const Contact = () => {
   return (
     <div>
       <div className="me text-black">
-        <h2 className="text-[1.5rem] py-3 px-5 border-3 border-black  mb-5 w-50 mx-auto mt-25 uppercase font-bold">
+        <h2 className="md:text-[1.5rem] py-3 px-5 border-3 border-black  mb-5 w-50 mx-auto mt-25 uppercase font-bold">
           Contact
         </h2>
-        <p className="text-base md:w-200 w-full mx-auto mt-10">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aut
-          officia quasi corporis soluta incidunt aliquid dolorem, ullam, dolor
-          nesciunt optio, tenetur blanditiis ipsam cupiditate.
+        <p className="text-base md:w-200 w-full mx-auto mt-10  px-5 md:px-0 md:text-pretty text-balance">
+          Let’s create something great together. Send a message anytime and I’ll
+          get back to you as soon as possible.
         </p>
       </div>
 

@@ -95,7 +95,7 @@ const subjects = [
       </div> */}
 
       {/* FORM */}
-      <div className="w-full md:w-1/3  p-6 md:p-10 flex flex-col">
+      <div className="form w-full md:w-1/3  p-6 md:p-10 flex flex-col">
         <form onSubmit={handleSubmit}>
           {/* NAME */}
           <div className="flex flex-col gap-10 mb-10">
