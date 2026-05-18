@@ -8,15 +8,18 @@ function Navigation() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full z-50 bg-black md:bg-transparent">
+    <nav className="navigation w-full z-50 bg-black md:bg-transparent">
       <div className="md:w-4/5 px-5 md:px-auto flex justify-between items-center mx-auto py-4">
         <div className="w-20 stroke-cyan-500 ">
-          <img src={logo} alt="Logo" className="hidden md:block rounded-full" />
-          <img
+          <a href="#navigation"><img src={logo} alt="Logo" className="hidden md:block rounded-full" /></a>
+
+          <a href="#navigation"><img
             src={logoWhite}
             alt="Logo"
             className="md:hidden block w-[70%] rounded-full"
-          />
+          /></a>
+          
+
         </div>
 
         <div

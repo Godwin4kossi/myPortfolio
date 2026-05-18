@@ -9,18 +9,19 @@ import typescript from "../assets/typescript.png";
 import bootstrap from "../assets/bootstrap.png";
 import git from "../assets/git.png";
 import next from "../assets/next.png";
+import php from "../assets/download.png";
 
 const Skills = () => {
   return (
-    <div className="w-3/5 skills text-black  mx-auto">
+    <div className="w-full sm:w-3/5 skills text-black  mx-auto">
       <h2 className="md:text-[1.5rem] py-3 px-5 border-3 border-black mb-5 w-60 mx-auto mt-25 uppercase font-bold">
         Skills
       </h2>
-      <h2 className="md:text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-left">
+      <h2 className="md:text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-center sm:text-left">
         Using Now :
       </h2>
 
-      <div className="flex flex-wrap justify-start md:gap-40 gap-10">
+      <div className="flex flex-wrap justify-center sm:justify-start md:gap-40 gap-10">
         <div className="skill-box">
           <img src={html} alt="" />
           <p className="mt-4">HTML5</p>
@@ -42,7 +43,7 @@ const Skills = () => {
           <p className="mt-4 uppercase">bootstrap</p>
         </div>
       </div>
-      <div className="flex flex-start items-end flex-wrap justify-start md:gap-40 gap-10 mt-20">
+      <div className="flex flex-start items-end flex-wrap justify-center sm:justify-start md:gap-40 gap-10 mt-20">
         <div className="skill-box">
           <img src={wordpress} className="mx-auto" alt="" />
           <p className="mt-4 uppercase">wordpress</p>
@@ -57,18 +58,18 @@ const Skills = () => {
         </div>
       </div>
 
-      <h2 className="md:text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-left">
+      <h2 className="md:text-[1.5rem] py-3 mb-5  mt-25 uppercase font-bold text-center sm:text-left">
         Learning :
       </h2>
-      <div className="flex flex-start flex-wrap justify-start md:gap-40 gap-10 mt-20">
+      <div className="flex flex-start flex-wrap justify-center sm:justify-start md:gap-40 gap-10 mt-20">
         <div className="skill-box">
           <img src={git} className="mx-auto" alt="" />
           <p className="mt-4 uppercase">git</p>
         </div>
-        {/* <div className="skill-box">
-          <img src={next} className="w-[90px] h-[100px]" alt="" />
+        <div className="skill-box">
+          <img src={php} className="w-[90px] h-[100px]" alt="" />
           <p className="mt-4 uppercase">next</p>
-        </div> */}
+        </div>
         <div className="skill-box">
           <img src={typescript} alt="" />
           <p className="mt-4 uppercase">typescript</p>

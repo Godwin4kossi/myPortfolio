@@ -1,6 +1,6 @@
 import { BadgeCheck, Github, Instagram, Linkedin } from 'lucide-react';
 import React from 'react'
-import profile from "../assets/profile-bg.png"
+import profile from "../assets/me.png"
 
 
 const Hero = () => {
@@ -10,9 +10,13 @@ const Hero = () => {
         <span className="text-xl font-semibold">Hi, I am</span>
 
         <div className="">
-          <h1 className="split-text-container flex items-center text-[4rem] font-semibold w-full">
-            <span class="text-part left md:text-[4rem] text-[2.5rem]">Godwin</span>
-            <span class="text-part right pl-5 md:text-[4rem]  text-[2.5rem]">Sunday</span>
+          <h1 className="split-text-container flex flex-wrap items-center text-[4rem] font-semibold w-full">
+            <span class="text-part left md:text-[4rem] text-[1.8rem] mr-2">
+              Godwin
+            </span>
+            <span class="text-part right pl-0 sm:pl-5 md:text-[4rem]  text-[1.8rem]">
+              Sunday
+            </span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -33,14 +37,32 @@ const Hero = () => {
         <p className="text-xl">Front-End Developer / Wordpress Developer</p>
 
         <div className="flex gap-4 mt-5">
-          <Github />
-          <Linkedin />
-          <Instagram />
+          <a
+            href="https://github.com/Godwin4kossi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kenny-sunday-156413128?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin />
+          </a>
+          <a
+            href="https://www.instagram.com/godwinsnd?igsh=MTkxcDllOXRreHpnMQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram />
+          </a>
         </div>
       </div>
 
-      <div className="hero-right mb-5 md:">
-        <img src={profile} alt="" />
+      <div className="hero-right mb-5 md:mb-0">
+        <img src={profile} className="w-200 h-auto rounded-bl-full rounded-br-full" alt="" />
       </div>
     </div>
   );
