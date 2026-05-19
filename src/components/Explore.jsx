@@ -3,10 +3,12 @@ import seperator from "../assets/separatorBlack.png"
 import tools1 from "../assets/tools1.png"
 import tools2 from "../assets/tools2.png"
 import tools3 from "../assets/tools3.png"
+import useFadeUpOnScroll from './portal/ScrollAnimation'
 
 const Explore = () => {
+  const exploreMeRef = useFadeUpOnScroll();
   return (
-    <div className="w-full mx-auto mt-30">
+    <div ref={exploreMeRef} className="w-full mx-auto mt-30 fade-up">
       <div>
         <img src={seperator} className="mx-auto mb-30" alt="" />
 

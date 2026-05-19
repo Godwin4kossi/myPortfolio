@@ -10,6 +10,7 @@ import img4 from "./assets/am.png";
 import img5 from "./assets/uh.png";
 import img6 from "./assets/hr.png";
 import img7 from "./assets/sc.png";
+import useFadeUpOnScroll from "./components/portal/ScrollAnimation";
 
 const galleryImg = [
   { id: 1, src: img1, alt: "website" },
@@ -39,7 +40,7 @@ const projectsAll = [
     id: 2,
     title: "ShopNaija",
     description:
-      "An online store where sellers can create a uniques store front with customises theme and receive payment.",
+      "A collaborator for An online store where sellers can create a uniques store front with customises theme and receive payment.",
     url: "https://shopnaija.store",
     tags: ["React.js", "Typescript"],
   },
@@ -54,7 +55,7 @@ const projectsAll = [
     id: 3,
     title: "SevenKnots Apartments Booking",
     description: "An hotel booking system",
-    url: "https://sevenknotsapartments.com",
+    url: "https://7knotsapartments.com",
     tags: ["React", "Typescript"],
   },
   // {
@@ -83,61 +84,63 @@ const projectsAll = [
 const projectsCoded = [
   {
     id: 2,
-    title: "Coded Project One",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["Next.js", "Node.js"],
+    title: "ShopNaija",
+    description:
+      "A collaborator for An online store where sellers can create a uniques store front with customises theme and receive payment.",
+    url: "https://shopnaija.store",
+    tags: ["React.js", "Typescript"],
   },
   {
-    id: 5,
-    title: "Coded Project Two",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["HTML", "CSS", "JS"],
+    id: 2,
+    title: "Assets Management App",
+    description: "An app that manages your assets and keeps usage records.",
+    url: "https://assets.revocube.com",
+    tags: ["React", "Tailwind"],
   },
   {
-    id: 6,
-    title: "Coded Project Three",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["React", "GSAP"],
+    id: 3,
+    title: "SevenKnots Apartments Booking",
+    description: "An hotel booking system",
+    url: "https://7knotsapartments.com",
+    tags: ["React", "Typescript"],
   },
 ];
 
 const projectsDesigned = [
-  {
-    id: 1,
-    title: "Design Project One",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["Figma", "Branding"],
-  },
-  {
-    id: 2,
-    title: "Design Project Two",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["Figma", "UI/UX"],
-  },
-  {
-    id: 3,
-    title: "Design Project Three",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["Illustrator", "Motion"],
-  },
-  {
-    id: 6,
-    title: "Design Project Four",
-    description: "A short description of what this project does and the problem it solves.",
-    url: "https://yourproject.com",
-    tags: ["Figma", "Web Design"],
-  },
+  // {
+  //   id: 1,
+  //   title: "Design Project One",
+  //   description: "A short description of what this project does and the problem it solves.",
+  //   url: "https://yourproject.com",
+  //   tags: ["Figma", "Branding"],
+  // },
+  // {
+  //   id: 2,
+  //   title: "Design Project Two",
+  //   description: "A short description of what this project does and the problem it solves.",
+  //   url: "https://yourproject.com",
+  //   tags: ["Figma", "UI/UX"],
+  // },
+  // {
+  //   id: 3,
+  //   title: "Design Project Three",
+  //   description: "A short description of what this project does and the problem it solves.",
+  //   url: "https://yourproject.com",
+  //   tags: ["Illustrator", "Motion"],
+  // },
+  // {
+  //   id: 6,
+  //   title: "Design Project Four",
+  //   description: "A short description of what this project does and the problem it solves.",
+  //   url: "https://yourproject.com",
+  //   tags: ["Figma", "Web Design"],
+  // },
 ];
 
 // ── Reusable project list section ─────────────────────────────────
-const ProjectList = ({ projects }) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-800 border-t border-gray-800">
+const ProjectList = ({ projects }) => { 
+    const projRef = useFadeUpOnScroll();
+  <div ref={projRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-800 border-t border-gray-800 cursor-pointer fade-up">
     {projects.map((project) => (
       <div
         key={project.id}
@@ -148,16 +151,27 @@ const ProjectList = ({ projects }) => (
           <h3 className="text-white font-bold text-base uppercase tracking-wide">
             {project.title}
           </h3>
-          
+
+          <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors shrink-0 mt-0.5"
             aria-label={`Visit ${project.title}`}
-          <a>
-            {/* Arrow-up-right icon */}
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M7 7h10v10" /><path d="M7 17 17 7" />
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
             </svg>
           </a>
         </div>
@@ -181,10 +195,11 @@ const ProjectList = ({ projects }) => (
       </div>
     ))}
   </div>
-);
+};
 
 // ── Page component ────────────────────────────────────────────────
 const Portfolio = () => {
+      const heroRef = useFadeUpOnScroll();
   return (
     <div className="mt-50">
       <div
@@ -196,17 +211,29 @@ const Portfolio = () => {
         </h2>
       </div>
 
-      <div className="bg-[#1A1A1A] text-center">
+      <div
+        ref={heroRef}
+        className="bg-[#1A1A1A] text-center fade-up port-header"
+      >
         <div className="w-full mx-auto">
           <Tabs defaultValue="all">
             <TabsList className="bg-[#1A1A1A] md:h-10 h-50 flex md:flex-row flex-col justify-center gap-4 mx-auto pt-15 pb-5 mb-10 text-center md:border-b-1 border-b-0 border-gray-500">
-              <TabsTrigger value="all" className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5">
+              <TabsTrigger
+                value="all"
+                className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5"
+              >
                 ALL
               </TabsTrigger>
-              <TabsTrigger value="coded" className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5">
+              <TabsTrigger
+                value="coded"
+                className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5"
+              >
                 CODED
               </TabsTrigger>
-              <TabsTrigger value="designed" className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5">
+              <TabsTrigger
+                value="designed"
+                className="data-[state=active]:bg-[#1A1A1A] data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-b-white text-white p-5"
+              >
                 DESIGNED
               </TabsTrigger>
             </TabsList>

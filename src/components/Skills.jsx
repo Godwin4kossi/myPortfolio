@@ -10,10 +10,16 @@ import bootstrap from "../assets/bootstrap.png";
 import git from "../assets/git.png";
 import next from "../assets/next.png";
 import php from "../assets/download.png";
+import useFadeUpOnScroll from './portal/ScrollAnimation';
 
 const Skills = () => {
+  const galleryRef = useFadeUpOnScroll();
+  // const projectListRef = useFadeUpOnScroll();
   return (
-    <div className="w-full sm:w-3/5 skills text-black  mx-auto">
+    <div
+      ref={galleryRef}
+      className="w-full sm:w-3/5 skills text-black  mx-auto fade-up"
+    >
       <h2 className="md:text-[1.5rem] py-3 px-5 border-3 border-black mb-5 w-60 mx-auto mt-25 uppercase font-bold">
         Skills
       </h2>

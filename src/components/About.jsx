@@ -1,10 +1,12 @@
 import React from 'react'
 import aboutBg from "../assets/aboutBg.png";
+import useFadeUpOnScroll from './portal/ScrollAnimation';
 
 
 const About = () => {
+  const aboutRef = useFadeUpOnScroll()
   return (
-    <div className="w-full inset-0 bg-[#1D1D1D]">
+    <div ref={aboutRef} className="w-full inset-0 bg-[#1D1D1D] fade-up">
       <div className="w-full flex  justify-between md:pl-20 px-10">
         <div className="about md:w-3/5 w-full text-left py-10">
           <h5 className="text-base text-white mb-5  md:w-3/5 w-full uppercase">

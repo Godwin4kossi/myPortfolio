@@ -1,9 +1,12 @@
 import React from 'react'
+import useFadeUpOnScroll from './portal/ScrollAnimation';
 
 const AboutMe = () => {
+    const aboutRef = useFadeUpOnScroll();
+
   return (
     <div>
-      <div className="me text-black">
+      <div ref={aboutRef} className="me text-black fade-up">
         <h2 className="md:text-[1.5rem] py-3 px-5 border-3 border-black mb-5 w-50 mx-auto mt-25 uppercase font-bold">
           About me
         </h2>
