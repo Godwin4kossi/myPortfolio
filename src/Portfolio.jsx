@@ -139,62 +139,54 @@ const projectsDesigned = [
 
 // ── Reusable project list section ─────────────────────────────────
 const ProjectList = ({ projects }) => { 
-    const projRef = useFadeUpOnScroll();
-  <div ref={projRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-800 border-t border-gray-800 cursor-pointer fade-up">
-    {projects.map((project) => (
-      <div
-        key={project.id}
-        className="bg-[#1A1A1A] p-6 flex flex-col gap-3 text-left"
-      >
-        {/* Title + link */}
-        <div className="flex items-start justify-between gap-2">
-          <h3 className="text-white font-bold text-base uppercase tracking-wide">
-            {project.title}
-          </h3>
+  const projRef = useFadeUpOnScroll();
 
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors shrink-0 mt-0.5"
-            aria-label={`Visit ${project.title}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+  return (
+    <div ref={projRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-800 border-t border-gray-800 cursor-pointer fade-up">
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          className="bg-[#1A1A1A] p-6 flex flex-col gap-3 text-left"
+        >
+          {/* Title + link */}
+          <div className="flex items-start justify-between gap-2">
+            <h3 className="text-white font-bold text-base uppercase tracking-wide">
+              {project.title}
+            </h3>
+            
+             <a href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-white transition-colors shrink-0 mt-0.5"
+              aria-label={`Visit ${project.title}`}
             >
-              <path d="M7 7h10v10" />
-              <path d="M7 17 17 7" />
-            </svg>
-          </a>
-        </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
+              </svg>
+            </a>
+          </div>
 
-        {/* Description */}
-        <p className="text-gray-400 text-sm leading-relaxed">
-          {project.description}
-        </p>
+          {/* Description */}
+          <p className="text-gray-400 text-sm leading-relaxed">
+            {project.description}
+          </p>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-auto pt-2">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs text-gray-300 border border-gray-600 px-2 py-0.5 rounded-sm uppercase tracking-wider"
-            >
-              {tag}
-            </span>
-          ))}
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mt-auto pt-2">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="text-xs text-gray-300 border border-gray-600 px-2 py-0.5 rounded-sm uppercase tracking-wider"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
+      ))}
+    </div>
+  );
 };
 
 // ── Page component ────────────────────────────────────────────────

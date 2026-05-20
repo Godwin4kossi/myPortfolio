@@ -76,10 +76,10 @@ const Skills = () => {
           <img src={php} className="w-[90px] h-[100px]" alt="" />
           <p className="mt-4 uppercase">next</p>
         </div>
-        <div className="skill-box">
+        {/* <div className="skill-box">
           <img src={typescript} alt="" />
           <p className="mt-4 uppercase">typescript</p>
-        </div>
+        </div> */}
         <div className="skill-box">
           <img src={next} alt="" className="w-[100px] h-[100px]" />
           <p className="mt-4 uppercase">Next jS</p>
